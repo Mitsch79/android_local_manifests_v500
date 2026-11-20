@@ -4,7 +4,7 @@ The local manifest pins the V500 device configuration, vendor graphics sources, 
 
 ## Existing LineageOS 21 checkout
 
-Install `v500.xml` under `.repo/local_manifests/`. To get just this file while preserving any existing local manifests:
+Install the device manifest and the temporary launcher override under `.repo/local_manifests/`.
 
 ```sh
 mkdir -p .repo/local_manifests
