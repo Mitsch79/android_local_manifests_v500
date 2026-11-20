@@ -1,0 +1,4 @@
+<manifest>
+  <include name="platform/lineage-21.0.xml" />
+  <include name="v500.xml" />
+</manifest>
