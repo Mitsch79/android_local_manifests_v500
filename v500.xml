@@ -2,8 +2,8 @@
 <manifest>
   <remote name="v500-github" fetch="https://github.com/Mitsch79" />
   <remote name="v500-ack" fetch="https://android.googlesource.com" />
-  <project remote="v500-ack" name="kernel/common" path="kernel/google/android14-6.1" revision="b07b626eb82251b596ef1812adf7c33ad6e4f16e" upstream="refs/heads/android14-6.1" />
-  <project remote="v500-github" name="android_device_lge_v500" path="device/lge/v500" revision="ad2ea847b5335231c6cffa60b018c3439599a4fc" upstream="refs/heads/lineage-21.0" />
+  <project remote="v500-ack" name="kernel/common" path="kernel/google/android14-6.1" revision="b07b626eb82251b596ef1812adf7c33ad6e4f16e" upstream="refs/heads/android14-6.1" clone-depth="1" />
+  <project remote="v500-github" name="android_device_lge_v500" path="device/lge/v500" revision="021eec174269a931f8f9647d7efaef4ce1909735" upstream="refs/heads/lineage-21.0" />
   <project remote="v500-github" name="android_vendor_lge_v500" path="vendor/lge/v500" revision="fac9edec2cab3e909fda46a4643f83d1fa1a666f" upstream="refs/heads/lineage-21.0" />
-  <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="595ae978d8a10ea475c48ec4ad36cf61fada5b09" upstream="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="c0636302478719d0572d7986a106021bfacbf276" upstream="refs/heads/lineage-21.0" />
 </manifest>
