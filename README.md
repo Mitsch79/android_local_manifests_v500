@@ -1,6 +1,6 @@
 # LineageOS 21 sources for LG G Pad 8.3 Wi-Fi
 
-The local manifest pins the V500 device configuration, vendor sources, 6.1 board port and upstream Android Common Kernel. It also selects the V500 forks of SetupWizard and SetupCompat at their normal Android source paths. The bring-up build uses a test ramdisk and separate ext4 images.
+The local manifest pins the V500 device configuration, vendor sources, 6.1 board port and upstream Android Common Kernel. It also selects the V500 forks of SetupWizard, SetupCompat and Settings at their normal Android source paths. The bring-up build uses a test ramdisk and separate ext4 images.
 
 ## Existing LineageOS 21 checkout
 
@@ -10,14 +10,14 @@ Install the device manifest and the temporary launcher override under `.repo/loc
 mkdir -p .repo/local_manifests
 curl -fL https://raw.githubusercontent.com/Mitsch79/android_local_manifests_v500/lineage-21.0/v500.xml -o .repo/local_manifests/v500.xml
 curl -fL https://raw.githubusercontent.com/Mitsch79/android_local_manifests_v500/lineage-21.0/v500-trebuchet.xml -o .repo/local_manifests/v500-trebuchet.xml
-repo sync device/lge/v500 vendor/lge/v500 kernel/lge/v500-port kernel/google/android14-6.1 packages/apps/Trebuchet packages/apps/SetupWizard external/setupcompat
+repo sync device/lge/v500 vendor/lge/v500 kernel/lge/v500-port kernel/google/android14-6.1 packages/apps/Trebuchet packages/apps/SetupWizard external/setupcompat packages/apps/Settings
 ```
 
 Use a clean checkout or back up existing local sources in those paths before syncing.
 
 ## V500 setup wizard
 
-`v500.xml` replaces the two upstream projects at `packages/apps/SetupWizard` and `external/setupcompat`. The wizard keeps the language page active during locale changes, controls its window brightness, prepares language and time zone data early and skips the network activity when the normal setup flow would immediately leave it. SetupCompat briefly caches a confirmed missing partner provider for the Lineage setup wizard. Both changes build directly from the synced sources.
+The wizard loads languages and time zones asynchronously, preserves navigation history and remembers selections when users revisit a page. SetupCompat carries the wizard brightness into the delegated lock screen and provides visible button feedback. The Settings fork lets users open developer options on builds without a Bluetooth adapter.
 
 ## Fresh checkout with pinned platform revisions
 

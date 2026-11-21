@@ -5,9 +5,11 @@
   <project remote="v500-ack" name="kernel/common" path="kernel/google/android14-6.1" revision="b07b626eb82251b596ef1812adf7c33ad6e4f16e" upstream="refs/heads/android14-6.1" clone-depth="1" />
   <project remote="v500-github" name="android_device_lge_v500" path="device/lge/v500" revision="51dd6fb9b0ea46e8227227e15a20ee5139478404" upstream="refs/heads/lineage-21.0" />
   <project remote="v500-github" name="android_vendor_lge_v500" path="vendor/lge/v500" revision="0ae8ddfc3c4afad953037dfc43df15aa53fe22b1" upstream="refs/heads/lineage-21.0" />
-  <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="ef32b6a72d6b13d8ea5357d3376024ffac84f64f" upstream="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="c94a809e46274aaa3e2dd22222fedd502d5e66a3" upstream="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
-  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="1a4d5949e33b14b9dd4eec61bee33851e2fcaf28" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="553318956e73cb1f28c592633b12640abfd4d9d5" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_external_setupcompat" />
-  <project remote="v500-github" name="android_external_setupcompat" path="external/setupcompat" revision="76a3a73de73bd01aa5d25314320e4980310e77f0" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk,sysui-studio" />
+  <project remote="v500-github" name="android_external_setupcompat" path="external/setupcompat" revision="7d62a84b2752d62ad1abcb38134f293c70bbad7a" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk,sysui-studio" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" />
+  <project remote="v500-github" name="android_packages_apps_Settings" path="packages/apps/Settings" revision="3d238862ee56c4965366a56827252ed5ffa802f0" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk-fs" />
 </manifest>
