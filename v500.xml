@@ -7,7 +7,7 @@
   <project remote="v500-github" name="android_vendor_lge_v500" path="vendor/lge/v500" revision="0ae8ddfc3c4afad953037dfc43df15aa53fe22b1" upstream="refs/heads/lineage-21.0" />
   <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="ab56203da781bc76a87eac05b337f0825fda27ac" upstream="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
-  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="f9156254f6f4acdfbbfb9177f57ee301e9588b4c" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="1a4d5949e33b14b9dd4eec61bee33851e2fcaf28" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_external_setupcompat" />
   <project remote="v500-github" name="android_external_setupcompat" path="external/setupcompat" revision="76a3a73de73bd01aa5d25314320e4980310e77f0" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk,sysui-studio" />
 </manifest>
