@@ -7,9 +7,9 @@
   <project remote="v500-github" name="android_vendor_lge_v500" path="vendor/lge/v500" revision="0ae8ddfc3c4afad953037dfc43df15aa53fe22b1" upstream="refs/heads/lineage-21.0" />
   <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="82b4b69c39924374db20a63f99826c538ca89455" upstream="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
-  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="553318956e73cb1f28c592633b12640abfd4d9d5" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="13f3a00fa163f4a16a78ee991237965c3c2da075" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_external_setupcompat" />
-  <project remote="v500-github" name="android_external_setupcompat" path="external/setupcompat" revision="7d62a84b2752d62ad1abcb38134f293c70bbad7a" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk,sysui-studio" />
+  <project remote="v500-github" name="android_external_setupcompat" path="external/setupcompat" revision="e2515ad904d9866c9b5d3c55c08143fc01acc9e5" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk,sysui-studio" />
   <remove-project name="LineageOS/android_packages_apps_Settings" />
-  <project remote="v500-github" name="android_packages_apps_Settings" path="packages/apps/Settings" revision="3d238862ee56c4965366a56827252ed5ffa802f0" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk-fs" />
+  <project remote="v500-github" name="android_packages_apps_Settings" path="packages/apps/Settings" revision="7105242caaca38a97edb2e8270aa13ec140f716a" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk-fs" />
 </manifest>
