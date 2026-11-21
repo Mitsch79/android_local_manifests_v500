@@ -1,6 +1,6 @@
 # LineageOS 21 sources for LG G Pad 8.3 Wi-Fi
 
-The local manifest pins the V500 device configuration, vendor graphics sources, 6.1 board port and upstream Android Common Kernel. These projects target the Wi-Fi LG-V500. The bring-up build uses a test ramdisk and separate ext4 images.
+The local manifest pins the V500 device configuration, vendor sources, 6.1 board port and upstream Android Common Kernel. It also selects the V500 forks of SetupWizard and SetupCompat at their normal Android source paths. The bring-up build uses a test ramdisk and separate ext4 images.
 
 ## Existing LineageOS 21 checkout
 
@@ -10,10 +10,14 @@ Install the device manifest and the temporary launcher override under `.repo/loc
 mkdir -p .repo/local_manifests
 curl -fL https://raw.githubusercontent.com/Mitsch79/android_local_manifests_v500/lineage-21.0/v500.xml -o .repo/local_manifests/v500.xml
 curl -fL https://raw.githubusercontent.com/Mitsch79/android_local_manifests_v500/lineage-21.0/v500-trebuchet.xml -o .repo/local_manifests/v500-trebuchet.xml
-repo sync device/lge/v500 vendor/lge/v500 kernel/lge/v500-port kernel/google/android14-6.1 packages/apps/Trebuchet
+repo sync device/lge/v500 vendor/lge/v500 kernel/lge/v500-port kernel/google/android14-6.1 packages/apps/Trebuchet packages/apps/SetupWizard external/setupcompat
 ```
 
 Use a clean checkout or back up existing local sources in those paths before syncing.
+
+## V500 setup wizard
+
+`v500.xml` replaces the two upstream projects at `packages/apps/SetupWizard` and `external/setupcompat`. The wizard keeps the language page active during locale changes, controls its window brightness, prepares language and time zone data early and skips the network activity when the normal setup flow would immediately leave it. SetupCompat briefly caches a confirmed missing partner provider for the Lineage setup wizard. Both changes build directly from the synced sources.
 
 ## Fresh checkout with pinned platform revisions
 
