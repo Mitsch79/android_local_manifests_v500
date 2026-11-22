@@ -21,6 +21,8 @@ The wizard loads languages and time zones asynchronously, preserves navigation h
 
 ## Fresh checkout with pinned platform revisions
 
+The V500 setup wizard can reuse OpenGL programs compiled on a training tablet with the same HWUI and Mesa build. To include them in the system image, follow the [device shader training instructions](https://github.com/Mitsch79/android_device_lge_v500/tree/lineage-21.0#precompile-the-setup-wizards-graphics-programs).
+
 ```sh
 repo init -u https://github.com/Mitsch79/android_local_manifests_v500 -b lineage-21.0 -m release/pinned.xml --git-lfs
 repo sync -c

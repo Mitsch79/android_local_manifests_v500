@@ -3,11 +3,11 @@
   <remote name="v500-github" fetch="https://github.com/Mitsch79" />
   <remote name="v500-ack" fetch="https://android.googlesource.com" />
   <project remote="v500-ack" name="kernel/common" path="kernel/google/android14-6.1" revision="b07b626eb82251b596ef1812adf7c33ad6e4f16e" upstream="refs/heads/android14-6.1" clone-depth="1" />
-  <project remote="v500-github" name="android_device_lge_v500" path="device/lge/v500" revision="51dd6fb9b0ea46e8227227e15a20ee5139478404" upstream="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_device_lge_v500" path="device/lge/v500" revision="d6f91c438efd765e2e3ec81ca8e4801c3ee54457" upstream="refs/heads/lineage-21.0" />
   <project remote="v500-github" name="android_vendor_lge_v500" path="vendor/lge/v500" revision="0ae8ddfc3c4afad953037dfc43df15aa53fe22b1" upstream="refs/heads/lineage-21.0" />
   <project remote="v500-github" name="android_kernel_lge_v500" path="kernel/lge/v500-port" revision="a9d3c213b777fc6ad36b0204461009d7041700d2" upstream="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_packages_apps_SetupWizard" />
-  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="ebac449bd7182192e41f7aedc12c5d3946585116" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
+  <project remote="v500-github" name="android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="2a60fb7c1714804521c0d35c7be79d21c43837ef" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" />
   <remove-project name="LineageOS/android_external_setupcompat" />
   <project remote="v500-github" name="android_external_setupcompat" path="external/setupcompat" revision="e2515ad904d9866c9b5d3c55c08143fc01acc9e5" upstream="refs/heads/lineage-21.0" dest-branch="refs/heads/lineage-21.0" groups="pdk,sysui-studio" />
   <remove-project name="LineageOS/android_packages_apps_Settings" />
