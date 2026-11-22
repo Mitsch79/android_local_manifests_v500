@@ -32,6 +32,18 @@ m systemimage vendorimage ramdisk
 
 The [kernel branch](https://github.com/Mitsch79/android_kernel_lge_v500/tree/lineage-21.0) documents the additional boot-image inputs, toolchain and kernel build. Firmware and the device-specific reference boot image must be supplied locally.
 
+### Verify the M6 graphics profile
+
+In the same shell used for `lunch`, check the vendor properties in the built product.
+
+```sh
+grep -E '^(ro\.hardware\.(egl|gralloc)|vendor\.hwc\.backend_override|vendor\.minigbm\.debug|ro\.sf\.lcd_density)=' "$ANDROID_PRODUCT_OUT/vendor/build.prop"
+```
+
+The native M6 profile selects Mesa, `minigbm_msm`, the `client` backend, linear scanout buffers (`nocompression`) and 280 logical dpi. An enabled `.v500-half-client` marker in the device checkout selects a different build profile. For a graphics comparison, keep the same system, vendor and boot inputs except for the component under test.
+
+On the selected tablet, `adb shell dumpsys SurfaceFlinger --comp-displays` reports the framebuffer dimensions and the validated composition type of each visible layer. Check these in the scene under test. To time a transition inside the shared setup window, match the target page's draw token to its presented display frame. [Android FrameTimeline](https://perfetto.dev/docs/data-sources/frametimeline)
+
 ## Temporary Trebuchet backport
 
 `v500-trebuchet.xml` replaces only `packages/apps/Trebuchet`. The fork is based on LineageOS 21 at `08002b5483685be3457908456afb42277eed4e08` and backports the [upstream unlock callback fix](https://github.com/LineageOS/android_packages_apps_Trebuchet/commit/a9355d4dba3f0bf93cb1a28eb738c6c05dc43ca9). A destroyed Quickstep service could otherwise register the recents input consumer a second time when its user unlocks.
