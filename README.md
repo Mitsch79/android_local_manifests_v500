@@ -2,6 +2,8 @@
 
 The local manifest pins the V500 device configuration, vendor sources, 6.1 board port and upstream Android Common Kernel. It also selects the V500 forks of SetupWizard, SetupCompat and Settings at their normal Android source paths. The bring-up build uses a test ramdisk and separate ext4 images.
 
+The [V500 kernel comparison](Kernelvergleich.md) documents hardware support in LG firmware, LineageOS 14.1 and the 6.1 port, including which features depend on the build profile.
+
 ## Existing LineageOS 21 checkout
 
 Install the device manifest and the temporary launcher override under `.repo/local_manifests/`.
