@@ -8,6 +8,14 @@ Für M1–M5 betreffen die verlinkten frühen Abnahmeberichte Nr. 2. Vorhandene 
 
 Für jeden Teiltest Gerät, Quellrevisionen, Boot-/System-/Vendor-Prüfsummen, Bauprofil, effektive Kernelkonfiguration, DTB, Ablauf und beobachtetes Ergebnis festhalten. Bei geräteabhängiger Bestückung auch das erkannte Bauteil nennen. Ein Messwert aus einem Diagnoseprofil zählt für genau diesen Aufbau. Für eine Funktionsfreigabe muss die Funktion über den vorgesehenen Bedienpfad im Zielbuild arbeiten. Im Freigabestand je Teiltest „bestanden“, „fehlgeschlagen“ oder „offen“ mit Beleg führen. Zusatztests gesondert kennzeichnen.
 
+## M6 – Abgenommen am 23.11.2026
+
+Kandidat 23 bestand auf allen vier V500 je zwei deutsche Ersteinrichtungen mit frischen Testdaten. Alle 72 regulären Seitenwechsel lagen unter 500 ms, der langsamste bei 479,3 ms. Die HOME-Sichtprüfung auf allen vier Geräten erfolgte mit Kandidat 18.
+
+Im anschließenden Vergleich mit dem optionalen CPUFreq-Profil (Ondemand, bis 1.728 MHz) sank der Median derselben neun Seitenwechsel über acht Läufe von 291,2 auf 190,4 ms. 71 von 72 Wechseln lagen unter 500 ms. Die Sprachauswahl auf Nr. 4 dauerte im ersten Lauf 1.498,9 ms und in der Wiederholung 190,2 ms. Die Messung reichte bis zur Anzeige der Abschlussseite. Nach den Läufen wurden Boot und Recovery per Prüfsumme sowie der Rückstart ins eingerichtete 14.1 geprüft.
+
+Der feste [Manifeststand](release/pinned.xml) enthält den [SetupWizard von Kandidat 23](https://github.com/Mitsch79/android_packages_apps_SetupWizard/commit/67a4bc448505fc02b13336cf10d1c48b06c01109) und den [Kernel des CPUFreq-Vergleichs](https://github.com/Mitsch79/android_kernel_lge_v500/commit/e69487faa939f97e4ffba59cdcac33e179241ffa).
+
 ## M7 – Energieversorgung, CPU und Standby
 
 **M7 umfasst die Implementierung und Geräteabnahme der Akkusteuerung im regulären LineageOS-21-Build.** Der PM8921-Treiber soll den Ladezustand aus den BMS-Messwerten bestimmen, die zum Akku und USB-Anschluss passenden Ladegrenzen setzen, bei Temperatur- und Fehlerereignissen reagieren, die Ladung beenden und bei Bedarf wieder aufnehmen. Android muss Ladezustand, Ladebetrieb und Temperatur über seine Akkuschnittstelle anzeigen. Die vorhandenen Mess- und Ladeprofile liefern dafür Vorarbeiten.
